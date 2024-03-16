@@ -1,0 +1,89 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://t3.ftcdn.net/jpg/03/02/00/20/360_F_302002079_O041KOp252Fcmers7kC9pJ0hExclArwO.jpg');
+    background-size: cover;
+}
+
+.dish {
+    width: 200px;
+    height: 320px;
+    margin: 10px;
+    position: relative;
+}
+.dish img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+.dish img.bottom {
+    z-index: 1;
+}
+.dish img.top {
+    z-index: 2;
+    opacity: 0;
+}
+.dish:hover img.top {
+    opacity: 1;
+}
+.dish:hover img.bottom {
+    opacity: 0;
+}
+
+.order-btn {
+    opacity: 0;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    align-items: center;
+}
+
+.dish:hover .order-btn {
+    display: block;
+    bottom: -20%;
+    opacity: 1;
+}
+
+.small-image {
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer;
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.small-image:hover {
+    filter: brightness(100%);
+}
+
+#main-image {
+    transition: opacity 0.3s ease;
+    width: 450px; 
+    height: 450px; 
+    object-fit: contain;
+    margin-left: 40px;
+}
+
+.courgette-regular {
+    font-family: "Courgette", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h1{
+    font-family: "Courgette", cursive;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 400;
+  }
